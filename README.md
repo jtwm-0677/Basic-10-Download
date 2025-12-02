@@ -1,8 +1,10 @@
 # Basic-10: BASIC to IC10 Compiler for Stationeers
 
-![Basic-10 Logo](screenshots/Basic10_Logo.png)
+[![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
 **Version 2.0.0** | By Dog Tired Studios
+
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.0.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.0.0/BasicToMips_v2.0.0.zip)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
 
