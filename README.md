@@ -94,35 +94,109 @@ Calculate CRC32 hashes for any string - useful for custom device references.
 
 ---
 
-## Built-in Documentation
+## Integrated Documentation Pane
 
-### Quick Start Guide
+The Documentation pane is always available in the right panel, with 8 tabs covering everything you need:
 
-![Quick Start Guide](screenshots/QuickStartGuide.png)
+### Start Tab - Quick Start Guide
 
-Get started immediately with:
+![Start Tab](screenshots/DocumentsPane_StartTab.png)
+
+Get started immediately:
+- Welcome and introduction to Basic-10
 - Your first program walkthrough
-- Main loop pattern explanation
-- Device connection basics
-- Property read/write examples
+- Understanding the code explanations
+- The main loop pattern (with YIELD warning)
+- Connecting devices basics
 
-### Language Reference
+### Syntax Tab - Complete Language Reference
 
-![Language Reference](screenshots/Language%20Reference.png)
+![Syntax Tab](screenshots/DocumentsPane_SyntaxTab.png)
 
-Complete syntax reference including:
-- Variables & constants
-- Device declarations
-- Device property access
-- Labels & jumps
-- Control structures
-- All operators
+Complete BASIC syntax reference:
+- Variables & constants (VAR, CONST, DEFINE, LET)
+- Device declarations (ALIAS, DEVICE)
+- Device property access with examples
+- Labels & jumps (GOTO, GOSUB, RETURN)
 
-### Full Documentation Window
+### Funcs Tab - Built-in Functions
 
-![Documentation](screenshots/Documentation.png)
+![Functions Tab](screenshots/DocumentsPane_FunctionsTab.png)
 
-Access comprehensive documentation with the Help menu or F1.
+All built-in functions with examples:
+- **Math functions**: ABS, SQRT, MIN, MAX, CEIL, FLOOR, ROUND, TRUNC, SGN, RND
+- **Trigonometry**: SIN, COS, TAN, ASIN, ACOS, ATAN (with radians tip)
+- Usage examples for each function
+
+### Devices Tab - Device Properties Reference
+
+![Devices Tab](screenshots/DocumentsPane_DevicesTab.png)
+
+Device property reference organized by category:
+- **Device Pins**: d0-d5, db, THIS
+- **Universal Properties**: On, Power, Error, Lock, PrefabHash, etc.
+- **Atmosphere Sensors**: Temperature, Pressure, RatioOxygen, etc.
+- **Valves, Pumps & Vents**: Setting, Mode, and more
+- Temperature conversion tips included
+
+### IC10 Tab - MIPS Instruction Reference
+
+![IC10 Tab](screenshots/DocumentsPane_IC10Tab.png)
+
+Complete IC10 assembly reference:
+- **Registers**: r0-r15, sp, ra, d0-d5, db
+- **Math Operations**: add, sub, mul, div, mod, exp, log, sqrt, etc.
+- **Trigonometry**: sin, cos, tan, asin, acos, atan
+- **Logic & Comparison**: and, or, xor, nor, not, sll, srl, sra, slt, sgt, etc.
+- **Branching & Jumps**: Listed below the reference
+
+### Tips Tab - Tips, Tricks & Patterns
+
+![Tips Tab](screenshots/DocumentsPane_TipsAndTricksTab.png)
+
+Essential programming patterns:
+- **The Main Loop** - proper structure with YIELD
+- **Hysteresis** - prevent rapid switching with dead bands
+- **Edge Detection** - detect button presses (not holds)
+- **State Machine** - for complex multi-step processes like airlocks
+
+### Examples Tab - 19 Ready-to-Use Scripts
+
+![Examples Tab](screenshots/DocumentsPane_ExampleScriptsTab.png)
+
+19 complete example scripts you can load directly:
+1. Blink Light
+2. Button Toggle
+3. Thermostat
+4. Pressure Regulator
+5. Oxygen Monitor
+6. Solar Tracker
+7. Battery Backup
+8. Airlock Controller
+9. Furnace Controller
+10. Batch Solar Array
+11. Item Sorter
+12. Base Status Monitor
+13. Dial Pump Control
+14. Math Demo
+15. Greenhouse Controller
+16. Counter with Increment/Decrement
+17. Smooth Value Adjustment
+18. Bit Flag Status System
+19. Loop with BREAK/CONTINUE
+
+### Wiki Tab - Integrated Stationeers Wiki
+
+![Wiki Tab](screenshots/InEditorWikiAccess.png)
+
+Browse the Stationeers Wiki without leaving the editor:
+- Full wiki access with navigation
+- Search for devices, items, and game mechanics
+- Look up crafting recipes and requirements
+
+![Wiki Example Page](screenshots/DocumentsPane_GameWikiExamplePageTab.png)
+
+View detailed wiki pages with tables, images, and specifications.
 
 ---
 
