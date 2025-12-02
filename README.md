@@ -292,7 +292,7 @@ For bug reports and feature requests, please visit the [Issues](https://github.c
 
 ## License
 
-Copyright (c) 2024 Dog Tired Studios. All rights reserved.
+Copyright (c) 2025 Dog Tired Studios. All rights reserved.
 
 This software is provided for personal use in playing Stationeers. The source code is not publicly available.
 
