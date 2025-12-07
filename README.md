@@ -1,4 +1,4 @@
-# Basic-10: BASIC to IC10 Compiler for Stationeers
+# BasIC-10: BASIC to IC10 Compiler for Stationeers
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
