@@ -2,9 +2,9 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.1.0** | By Dog Tired Studios
+**Version 2.2.0** | By Dog Tired Studios
 
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.1.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.1.0/BasIC-10v2.1.0.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.2.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.2.0/BasIC-10v2.2.0.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -264,6 +264,10 @@ main:
 ---
 
 ## Changelog
+
+### v2.2.0
+- **Critical bug fix**: Jump target calculation now correctly ignores comment lines
+- IC10 doesn't count comments as instructions, but the compiler was - this caused all control flow (loops, GOTOs, IF/ELSE, WHILE, FOR) to jump to wrong lines when comments were present
 
 ### v2.1.0
 - **Critical bug fix**: Fixed jump target miscalculation in single-line IF statements with assignments
