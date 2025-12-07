@@ -2,9 +2,9 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.0.0** | By Dog Tired Studios
+**Version 2.1.0** | By Dog Tired Studios
 
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.0.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.0.0/BasicToMips_v2.0.0.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.1.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.1.0/BasIC-10v2.1.0.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -223,7 +223,7 @@ Real-time error detection:
 
 ### Steps
 
-1. **Download** the latest release: [BasicToMips_v2.0.0.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
+1. **Download** the latest release: [BasIC-10v2.1.0.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
 2. **Extract** the ZIP file to a folder of your choice (e.g., `C:\Games\Basic-10\`)
 
@@ -264,6 +264,13 @@ main:
 ---
 
 ## Changelog
+
+### v2.1.0
+- **Critical bug fix**: Fixed jump target miscalculation in single-line IF statements with assignments
+- **Critical bug fix**: Fixed unconditional jump instructions using label names instead of numeric offsets
+- **Critical bug fix**: Fixed IC10 output including label definitions which caused scripts to fail silently in-game
+- Comments and user labels now correctly excluded from instruction counting
+- Improved code generation reliability for all jump-based constructs
 
 ### v2.0.0
 - Array support with `DIM` statements
