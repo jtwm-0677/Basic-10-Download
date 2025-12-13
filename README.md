@@ -2,9 +2,9 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.2.2** | By Dog Tired Studios
+**Version 2.2.3** | By Dog Tired Studios
 
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.2.2-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.2.2/BasIC-10v2.2.2.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.2.3-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.2.3/BasIC-10v2.2.3.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -223,7 +223,7 @@ Real-time error detection:
 
 ### Steps
 
-1. **Download** the latest release: [BasIC-10v2.2.2.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
+1. **Download** the latest release: [BasIC-10v2.2.3.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
 2. **Extract** the ZIP file to a folder of your choice (e.g., `C:\Games\Basic-10\`)
 
@@ -264,6 +264,11 @@ main:
 ---
 
 ## Changelog
+
+### v2.2.3
+- **Improved Decompiler** - Now preserves alias names when decompiling (e.g., `RoomSensor` instead of `var0`)
+- Unknown device hashes labeled as `[DEVICE_UNKNOWN:hash]` to prompt user to fill in
+- Unknown name hashes labeled as `[NAME_UNKNOWN:hash]` for clarity
 
 ### v2.2.2
 - **New Feature: External Memory Access** - Read/write external memory devices using `device.Memory[address]` syntax
