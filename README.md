@@ -2,9 +2,9 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.2.3** | By Dog Tired Studios
+**Version 2.3.0** | By Dog Tired Studios
 
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.2.3-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.2.3/BasIC-10v2.2.3.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.3.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.3.0/BasIC-10v2.3.0.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -223,7 +223,7 @@ Real-time error detection:
 
 ### Steps
 
-1. **Download** the latest release: [BasIC-10v2.2.3.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
+1. **Download** the latest release: [BasIC-10v2.3.0.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
 2. **Extract** the ZIP file to a folder of your choice (e.g., `C:\Games\Basic-10\`)
 
@@ -265,25 +265,31 @@ main:
 
 ## Changelog
 
-### v2.2.3
+### v2.3.0 - Bug Fixes
+- **Language Detection Fix**: Fixed BASIC code with `#` comments being incorrectly detected as IC10
+- **Extended Script Mode**: Fixed line limit enforcement (128 vanilla / 512 extended)
+- **BATCHWRITE Statement**: Fixed `BATCHWRITE(hash, "Property", value)` not compiling
+- **Autosave Recovery**: Fixed recovery prompt appearing for default welcome script
+
+### v2.2.3 - Improved Decompiler
 - **Improved Decompiler** - Now preserves alias names when decompiling (e.g., `RoomSensor` instead of `var0`)
 - Unknown device hashes labeled as `[DEVICE_UNKNOWN:hash]` to prompt user to fill in
 - Unknown name hashes labeled as `[NAME_UNKNOWN:hash]` for clarity
 
-### v2.2.2
+### v2.2.2 - External Memory Access
 - **New Feature: External Memory Access** - Read/write external memory devices using `device.Memory[address]` syntax
 - Supports Logic Memory, Stack Chips, Queue Chips, and Memory Utility Chips
 - Compiles to `get`/`put` for pin aliases, `getd`/`putd` for named devices
 - Example: `mem.Memory[0]` to read, `mem.Memory[5] = 42` to write
 
-### v2.2.1
+### v2.2.1 - Extended Script Mode
 - **New Feature: Extended Script Mode (512 Lines)** - Enable "Extended (512)" checkbox in toolbar to allow scripts up to 512 lines
 - Requires the **"More Lines of Code"** mod by **jixxed**: [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3265272725)
 - First-time warning dialog explains mod requirement with option to open Steam Workshop page
 - Color-coded line count: Green (0-99), Orange (100-128), Purple (129-450 extended), Red (over limit)
 - Scripts saved in extended mode include mod requirement in IC10 header and instruction.xml
 
-### v2.2.0
+### v2.2.0 - Hotfix
 - **Critical bug fix**: Jump target calculation now correctly ignores comment lines
 - IC10 doesn't count comments as instructions, but the compiler was - this caused all control flow (loops, GOTOs, IF/ELSE, WHILE, FOR) to jump to wrong lines when comments were present
 
