@@ -2,9 +2,9 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.3.0** | By Dog Tired Studios
+**Version 2.4.0** | By Dog Tired Studios
 
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.3.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.3.0/BasIC-10v2.3.0.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.4.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.4.0/BasIC-10v2.4.0.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -223,7 +223,7 @@ Real-time error detection:
 
 ### Steps
 
-1. **Download** the latest release: [BasIC-10v2.3.0.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
+1. **Download** the latest release: [BasIC-10v2.4.0.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
 2. **Extract** the ZIP file to a folder of your choice (e.g., `C:\Games\Basic-10\`)
 
@@ -264,6 +264,22 @@ main:
 ---
 
 ## Changelog
+
+### v2.4.0 - Advanced IC10 Features
+- **New Feature: POKE Instruction** - Write directly to stack memory addresses with `POKE address, value`
+- **New Feature: Batch Slot Operations** - Read/write slot properties across all devices of a type
+  - `BATCHSLOT(hash, slot, "Property", mode)` - Read with Average/Sum/Min/Max modes
+  - `BATCHSLOT_WRITE(hash, slot, "Property", value)` - Write to all matching device slots
+  - Compiles to IC10 `lbs`/`sbs` (and `lbns`/`sbns` for named variants)
+- **New Feature: Indirect Register Access** - Dynamic register addressing with computed indices
+  - `REG(index)` - Read from register r{index}
+  - `REGSET(index, value)` - Write to register r{index}
+  - Uses IC10 indirect addressing (`rr0`-`rr15`) for variable indices
+- **New Feature: Indirect Device Access** - Dynamic device pin addressing
+  - `DEVICE(index).Property` - Read/write device d{index}
+  - `DEVICE(index).Slot[n].Property` - Slot access with computed device index
+  - Uses IC10 indirect addressing (`dr0`-`dr5`) for variable indices
+  - Perfect for iterating over all 6 device pins in a loop
 
 ### v2.3.0 - Bug Fixes
 - **Language Detection Fix**: Fixed BASIC code with `#` comments being incorrectly detected as IC10
