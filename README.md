@@ -2,9 +2,9 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.5.0** | By Dog Tired Studios
+**Version 2.6.0** | By Dog Tired Studios
 
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.5.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.5.0/BasIC-10v2.5.0.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.6.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.6.0/BasIC-10v2.6.0.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -223,7 +223,7 @@ Real-time error detection:
 
 ### Steps
 
-1. **Download** the latest release: [BasIC-10v2.5.0.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
+1. **Download** the latest release: [BasIC-10v2.6.0.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
 2. **Extract** the ZIP file to a folder of your choice (e.g., `C:\Games\Basic-10\`)
 
@@ -264,6 +264,13 @@ main:
 ---
 
 ## Changelog
+
+### v2.6.0 - Device.Set Property & Bug Fixes
+- **New Feature: Device.Set Property** - Check if a device is connected using `device.Set` syntax. Returns 1 if connected, 0 if not. Compiles to optimized `bdse`/`bdns` branch instructions in conditionals, or `sdse` for expression use.
+- **New Feature: Floating Snippets Window** - The Code Snippets panel is now a proper draggable floating window (like Device Database), instead of a fixed popup
+- **Bug Fix: Clipboard Error** - Added retry logic for 'clipbrd_e_cant_open' errors when clipboard is locked by another application
+- **Bug Fix: Autocomplete Duplication** - Selecting a completion now properly replaces the typed prefix instead of duplicating it (e.g., typing "con" and selecting "CONST" now gives "CONST", not "conCONST")
+- **Documentation Fix: Named Device References** - Corrected the syntax examples. The correct syntax is: `ALIAS sensor = IC.Device[StructureGasSensor].Name["Room 1"]`
 
 ### v2.5.0 - MIPS Line Highlighting & Tab Improvements
 - **New Feature: MIPS Line Highlighting** - When your cursor moves in the BASIC editor, the corresponding IC10 lines highlight in the MIPS output panel. This visual learning tool helps you understand what your BASIC code compiles to.
