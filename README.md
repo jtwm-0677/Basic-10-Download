@@ -2,10 +2,10 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.6.1** | By Dog Tired Studios
+**Version 3.1.2** | By Dog Tired Studios
 
 ![Downloads](https://img.shields.io/github/downloads/jtwm-0677/Basic-10-Download/total?style=for-the-badge&logo=github&label=Downloads)
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.6.1-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.6.1/BasIC-10v2.6.1.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v3.1.2-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v3.1.2/BasIC-10v3.1.2.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -224,7 +224,7 @@ Real-time error detection:
 
 ### Steps
 
-1. **Download** the latest release: [BasIC-10v2.6.1.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
+1. **Download** the latest release: [BasIC-10v3.1.2.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
 2. **Extract** the ZIP file to a folder of your choice (e.g., `C:\Games\Basic-10\`)
 
@@ -265,6 +265,11 @@ main:
 ---
 
 ## Changelog
+
+### v3.1.2 - Stability & Parser Fixes
+- **Bug Fix: Application Crash on FUNCTION/SUB/CASE** - Fixed hard crash when declaring functions, subroutines, or using CASE statements. Added defensive error handling and infinite loop protection in parser.
+- **Bug Fix: ENDIF Same-Line Parsing** - Parser now correctly recognizes ENDIF when placed on the same line as other statements (e.g., `ELSE x = 0 ENDIF` or `IF x THEN y = 1 ENDIF`).
+- **Improved Parser Stability** - Added infinite loop detection safeguards to FOR, WHILE, DO, SUB, and FUNCTION block parsing.
 
 ### v2.6.1 - Bug Fixes
 - **Bug Fix: Named Device Memory Access** - Compiler now correctly detects and reports an error when `.Memory[]` is used with named devices. IC10's `getd`/`putd` instructions only support device type hashes, not name hashes, so named devices cannot be used for memory access. Use pin aliases (d0-d5) instead.
