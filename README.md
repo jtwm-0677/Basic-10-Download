@@ -2,10 +2,10 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.6.2** | By Dog Tired Studios
+**Version 2.6.3** | By Dog Tired Studios
 
 ![Downloads](https://img.shields.io/github/downloads/jtwm-0677/Basic-10-Download/total?style=for-the-badge&logo=github&label=Downloads)
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.6.2-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.6.2/BasIC-10v2.6.2.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.6.3-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.6.3/BasIC-10v2.6.3.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -265,6 +265,11 @@ main:
 ---
 
 ## Changelog
+
+### v2.6.3 - Comment & Tab Fixes
+- **Bug Fix: Tab Title Not Updating** - Tab names now update immediately when saving, opening files, or loading examples. Previously required adding a new tab to refresh.
+- **Bug Fix: Inline Comments Breaking ENDIF** - Comments after `THEN` on IF/ELSEIF lines no longer break ENDIF detection. The parser now correctly treats comments as end-of-line markers.
+- **New Feature: Single Quote Comments** - Added support for traditional BASIC single quote (`'`) comment syntax in addition to IC10-style `#` comments. Both compile to `#` in the output.
 
 ### v2.6.2 - Stability & Parser Fixes
 - **Bug Fix: Application Crash on FUNCTION/SUB/CASE** - Fixed hard crash when declaring functions, subroutines, or using CASE statements. Added defensive error handling and infinite loop protection in parser.
