@@ -2,10 +2,10 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.6.5** | By Dog Tired Studios
+**Version 2.6.6** | By Dog Tired Studios
 
 ![Downloads](https://img.shields.io/github/downloads/jtwm-0677/Basic-10-Download/total?style=for-the-badge&logo=github&label=Downloads)
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.6.5-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.6.5/BasIC-10v2.6.5.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.6.6-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.6.6/BasIC-10v2.6.6.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -265,6 +265,10 @@ main:
 ---
 
 ## Changelog
+
+### v2.6.6 - Format Document Fix
+- Fixed: Format Document no longer splits compound operators (`<=` stays `<=`, not `< =`)
+- Added: MCP endpoint `basic10_format` for AI-assisted code formatting
 
 ### v2.6.5 - Bitwise Keyword Conflict Fix
 - **Bug Fix: Variable Name Conflict** - Removed reserved keywords `BAND`, `BOR`, `BXOR`, `XOR`, `BNOT` that conflicted with common variable names. Names like `band`, `bor`, etc. can now be used as variable names.
