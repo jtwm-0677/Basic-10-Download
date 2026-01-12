@@ -2,10 +2,10 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.6.7** | By Dog Tired Studios
+**Version 2.6.8** | By Dog Tired Studios
 
 ![Downloads](https://img.shields.io/github/downloads/jtwm-0677/Basic-10-Download/total?style=for-the-badge&logo=github&label=Downloads)
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.6.7-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.6.7/BasIC-10v2.6.7.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.6.8-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.6.8/BasIC-10v2.6.8.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -224,7 +224,7 @@ Real-time error detection:
 
 ### Steps
 
-1. **Download** the latest release: [BasIC-10v2.6.2.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
+1. **Download** the latest release: [BasIC-10v2.6.8.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
 2. **Extract** the ZIP file to a folder of your choice (e.g., `C:\Games\Basic-10\`)
 
@@ -265,6 +265,13 @@ main:
 ---
 
 ## Changelog
+
+### v2.6.8 - Bug Fixes & Autocomplete Improvements
+- **Bug Fix: Boolean OR/AND Expressions** - Fixed critical bug where `IF A OR B THEN` would only evaluate `B`, ignoring `A`. This affected any OR/AND condition where one operand was a plain variable (not a comparison). Now both operands are correctly evaluated.
+- **Bug Fix: RETURN Value Parsing** - Fixed `RETURN value` syntax being silently ignored. Return values now correctly push to the stack for retrieval with `POP`.
+- **Bug Fix: Autocomplete Missing User Symbols** - Variables, constants, aliases, and labels declared in your code now appear in autocomplete after compilation.
+- **Bug Fix: Simple Alias Autocomplete** - Simple aliases like `ALIAS sensor = d0` now appear in autocomplete (previously only advanced IC.Device references were captured).
+- **Added: QuantumPickleJar Thanks** - Special thanks added to About dialog for diligent bug reports and project support.
 
 ### v2.6.7 - Documentation Fix
 - Fixed: Slot access syntax in documentation now correctly shows `Slot[n]` instead of `Slot(n)`
