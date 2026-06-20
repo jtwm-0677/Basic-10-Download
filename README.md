@@ -2,10 +2,10 @@
 
 [![Basic-10 Logo](screenshots/Basic10_Logo.png)](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
-**Version 2.6.10** | By Dog Tired Studios
+**Version 2.7.0** | By Dog Tired Studios
 
 ![Downloads](https://img.shields.io/github/downloads/jtwm-0677/Basic-10-Download/total?style=for-the-badge&logo=github&label=Downloads)
-[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.6.10-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.6.10/BasIC-10v2.6.10.zip)
+[![Download NOW](https://img.shields.io/badge/Download_NOW-v2.7.0-blue?style=for-the-badge&logo=windows)](https://github.com/jtwm-0677/Basic-10-Download/releases/download/v2.7.0/BasIC-10v2.7.0.zip)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-Support_Development-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/dogtired.thunderduck)
 
 Basic-10 is a powerful IDE that lets you write programs in BASIC and compiles them to IC10 (MIPS) assembly for use in the game [Stationeers](https://store.steampowered.com/app/544550/Stationeers/).
@@ -224,7 +224,7 @@ Real-time error detection:
 
 ### Steps
 
-1. **Download** the latest release: [BasIC-10v2.6.10.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
+1. **Download** the latest release: [BasIC-10v2.7.0.zip](https://github.com/jtwm-0677/Basic-10-Download/releases/latest)
 
 2. **Extract** the ZIP file to a folder of your choice (e.g., `C:\Games\Basic-10\`)
 
@@ -265,6 +265,14 @@ main:
 ---
 
 ## Changelog
+
+### v2.7.0 - Display Strings, DEVICE Hashes, ASM Blocks & Editor Fixes
+- **New Feature: Inline IC10 (`ASM` / `EASM`) (#8)** - Drop raw IC10 assembly into a BASIC program with an `ASM ... EASM` block; it is emitted into the output verbatim. Includes advisory validation (unknown opcodes, register clobbering, and operand-count issues appear as warnings, never blocking) so you can still use instructions newer than the editor knows about. Use `r14`/`r15` for scratch.
+- **Bug Fix: Displays Won't Take Strings (#17)** - Writing a string to a device property now compiles to `STR("...")` instead of a number hash. `Display.Setting = ("Test")` now produces `s d4 Setting STR("Test")`; also applies to `PRINT "text"`. Use `HASH("...")` when you actually want the CRC hash.
+- **Bug Fix: DEVICE References with Negative Hashes (#7)** - `IC.Device[-539224550]` (a negative device hash) now compiles instead of failing.
+- **Bug Fix: Retro Fonts (#5)** - Selecting Apple II / TRS-80 under Retro Effects now applies the font immediately instead of falling back to the system font. The fonts are also now correctly bundled in the download.
+- **Bug Fix: Snippets Panel (#6)** - The Code Snippets panel is now a draggable, resizable floating window (no longer pinned on top of your code), toggled with **F6**.
+- **Bug Fix: Autocomplete (#4)** - Accepting a suggestion now overwrites the prefix you have already typed (`PRI` + PRINT yields `PRINT`, not `PRIPRINT`), and a single click inserts.
 
 ### v2.6.10 - Decimal Locale & Slot Access Fixes
 - **Bug Fix: Decimal Literals in Non-English Locales (#16)** - Constants like `CONST X = 0.18` no longer fail to compile on systems whose locale uses `,` as the decimal separator. All number parsing and IC10 output now use invariant culture, so BASIC source remains portable across locales and the emitted IC10 always uses `.` decimals.
